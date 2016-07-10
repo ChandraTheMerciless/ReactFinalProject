@@ -1,1 +1,3 @@
 # ReactFinalProject
+
+npn run build
