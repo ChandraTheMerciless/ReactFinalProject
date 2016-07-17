@@ -2,7 +2,7 @@ var HowToHelp = React.createClass({
     render: function(){
         return(
             <div>
-            <p>Welcome to how to help.</p>
+            <h3>How to help</h3>
         </div>
         );
     }
