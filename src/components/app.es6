@@ -6,13 +6,14 @@ import TemplateLayout from '../components/templateLayout'
 import RedFlags from '../components/redFlags'
 import Home from '../components/home'
 import HowToHelp from '../components/howToHelp'
+import { hashHistory } from 'react-router'
 
 ReactDOM.render((
-    <Router>
+    <Router history={hashHistory}>
         <Route component={TemplateLayout}>
             <Route path="/" component={Home} />
-            <Route path="/red-flags" component={RedFlags} />
-            <Route path="/how-to-help" component={HowToHelp} />
+            <Route path="/redFlags" component={RedFlags} />
+            <Route path="/howToHelp" component={HowToHelp} />
         </Route>
     </Router>
 ), document.getElementById('app'));

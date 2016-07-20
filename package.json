@@ -5,7 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "build": "babel src/components -d lib/components && babel lib/components -d dist && browserify lib/components/*.js -o dist/app.js",
-    "start": "http-server -p 4000"
+    "start": "http-server -p 5000"
   },
   "author": "Chandra and Keith",
   "dependencies": {
@@ -15,7 +15,7 @@
     "react": "^15.2.1",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
-    "react-router": "^2.5.1",
+    "react-router": "^2.6.0",
     "redux": "^3.5.2"
   },
   "devDependencies": {
