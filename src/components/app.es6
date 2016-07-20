@@ -6,6 +6,7 @@ import TemplateLayout from '../components/templateLayout'
 import RedFlags from '../components/redFlags'
 import Home from '../components/home'
 import HowToHelp from '../components/howToHelp'
+import WorldClock from '../components/worldClock'
 import { hashHistory } from 'react-router'
 
 ReactDOM.render((
@@ -14,6 +15,7 @@ ReactDOM.render((
             <Route path="/" component={Home} />
             <Route path="/redFlags" component={RedFlags} />
             <Route path="/howToHelp" component={HowToHelp} />
+            <Route path="/worldClock" component={WorldClock} />
         </Route>
     </Router>
 ), document.getElementById('app'));

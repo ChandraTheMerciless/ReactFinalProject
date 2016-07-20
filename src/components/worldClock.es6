@@ -9,7 +9,7 @@ export default class WorldClock extends React.Component {
             	<hr />
             	<div className="main">
             		<div id="worldClock-selection" className="worldClock-main">
-            			<p>Time time time time time</p>
+            			<p>Time time time time time all the time.</p>
             		</div>
            		</div>
         	</div>
