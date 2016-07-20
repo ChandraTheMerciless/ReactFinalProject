@@ -2,10 +2,10 @@ import React from 'react'
 import {render} from 'react-dom'
 import {Router, Route, Link, browserHistory, RouteHandler} from 'react-router'
 
-import TemplateLayout from './components/template-layout'
-import RedFlags from './components/red-flags'
-import Home from './components/home'
-import HowToHelp from './components/how-to-help'
+import TemplateLayout from '../components/templateLayout'
+import RedFlags from '../components/redFlags'
+import Home from '../components/home'
+import HowToHelp from '../components/howToHelp'
 
 ReactDOM.render((
     <Router>

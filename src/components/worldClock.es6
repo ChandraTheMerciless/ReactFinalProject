@@ -1,5 +1,7 @@
-var WorldClock = React.createClass({
-    render: function(){
+import React from 'react'
+
+export default class WorldClock extends React.Component {
+    render() {
         return(
             <div>
             <p>Please select a time zone.</p>
@@ -13,6 +15,4 @@ var WorldClock = React.createClass({
         	</div>
         );
     }
-});
-
-export default WorldClock
+}
