@@ -3,13 +3,28 @@ import React from 'react'
 export default class WorldClock extends React.Component {
     render() {
         return(
-            <div>
+            <div id="worldClock">
             <p>Please select a time zone.</p>
             	<button id="translate">Translate this page</button>
             	<hr />
-            	<div className="main">
-            		<div id="worldClock-selection" className="worldClock-main">
-            			<p>Time time time time time all the time.</p>
+            	<div className="worldClock__main">
+            		<div id="worldClock__selection">
+            			<span id="worldClock--header">Welcome to the World Clock page</span>
+                        <span id="worldClock--subheader">Here you can select a time from your home country</span>
+                        <div id="worldClock__Map" />
+                        <div id="worldClock__inputForm--wrapper">
+                            <form id="worldClock__inputForm">
+                                <input id="worldClock--search" type="text" />
+                                <input id="worldClock--searchButton" type="button" />
+                            </form>
+                        </div>
+                        <div id="worldClock__outputForm--wrapper">
+                            <form id="worldClock__outputForm">
+                                <input id="worldClock--localTime" />
+                                <input id="worldClock--selectedTime" />
+                                <input id="worldClock--formatSelector" />
+                            </form>
+                        </div>
             		</div>
            		</div>
         	</div>
