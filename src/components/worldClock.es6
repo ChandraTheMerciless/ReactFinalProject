@@ -1,6 +1,11 @@
 import React from 'react'
 
 export default class WorldClock extends React.Component {
+
+    addTimeZone() {
+        //setState({timeZone: DeLorean.getTime()).bind(this)});
+    }
+
     render() {
         return(
             <div id="worldClock">
@@ -15,14 +20,14 @@ export default class WorldClock extends React.Component {
                         <div id="worldClock__inputForm--wrapper">
                             <form id="worldClock__inputForm">
                                 <input id="worldClock--search" type="text" />
-                                <input id="worldClock--searchButton" type="button" />
+                                <input id="worldClock--searchButton" type="button" onClick={this.addTimeZone.bind()} />
                             </form>
                         </div>
                         <div id="worldClock__outputForm--wrapper">
                             <form id="worldClock__outputForm">
                                 <input id="worldClock--localTime" />
                                 <input id="worldClock--selectedTime" />
-                                <input id="worldClock--formatSelector" />
+                                <input id="worldClock--formatSelector" type="Radio" />
                             </form>
                         </div>
             		</div>

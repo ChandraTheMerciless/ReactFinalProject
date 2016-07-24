@@ -2,6 +2,14 @@ import React from 'react'
 import { Link } from 'react-router'
 
 export default class Home extends React.Component {
+  
+  //state instantiation
+constructor(props) {
+  super(props);
+  
+  this.render = this.render.bind(this);
+ }
+
   setToHelp(){
     setState({navStatus: "toHelp"});
     console.log("to help");

@@ -8,6 +8,7 @@ function getTime(locationIndex) {
 
 	//ajax request to API
 	//will return a JSON with detailed info about the time zone
+	//after 88MPH
 	$.ajax({
 		url: requestBody,
 		type:"GET",
