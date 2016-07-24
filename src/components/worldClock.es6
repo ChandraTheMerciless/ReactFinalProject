@@ -1,9 +1,19 @@
 import React from 'react'
 
 export default class WorldClock extends React.Component {
+  constructor(props){
+    //well the constructor function isn't breaking the build anymore, so we have that going for us :P
+      super(props);
+      console.log("CONSTRUCTOR FUNCTION");
+      this.state = {};
+  }
+
 
     addTimeZone() {
-        //setState({timeZone: DeLorean.getTime()).bind(this)});
+        // this.setState({timeZone: DeLorean.getTime().bind(this)});
+        var location = document.getElementById("worldClock--search").value;
+        console.log(location);
+        getTime(location);
     }
 
     render() {
