@@ -9,7 +9,7 @@ export default class TemplateLayout extends React.Component {
                         <HotlineAndWebsite />
                         <Link to="/">Home </Link> |
                         <Link to="/redFlags"> Red Flags </Link> |
-                        <Link to="/questionsToAsk"> Questions to Ask</Link> | 
+                        <Link to="/questionsToAsk"> Questions to Ask</Link> |
                         <Link to="/howToHelp"> How to Help </Link> |
                         <Link to="/worldClock"> World Clock</Link>
                     </header>
