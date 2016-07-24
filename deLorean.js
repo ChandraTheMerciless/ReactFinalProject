@@ -31,6 +31,10 @@ function handleResult(latlongIndex) {
 	$.ajax({
 		url: requestBody,
 		type:"GET",
+		beforeSend: function(xhr){
+			//put authorization stuff here
+			//xhr.setRequestHeader('X-Mashape-Key', some other stuff);
+		},
 		success: function(data) {
 			console.log(data);
 			return data;
