@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 
 export default class TemplateLayout extends React.Component {
     render() {
-        return (<div>
+        return (<div className="container-fluid">
                     <header className="header">
                         <HotlineAndWebsite />
                         <Link to="/">Home </Link> |
@@ -17,7 +17,6 @@ export default class TemplateLayout extends React.Component {
                         <div>
                             {this.props.children}
                         </div>
-                        <div className="footer"><hr />Footer</div>
                 </div>);
     }
 }

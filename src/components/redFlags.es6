@@ -4,7 +4,7 @@ export default class RedFlags extends React.Component {
     render() {
         return(
           <div>
-            	<h3>Red Flags</h3>
+            	<h3 className="text-primary">Red Flags</h3>
               <p>Human trafficking can come in several forms, and can range from labor trafficking to sex trafficking of children and adults. These are some common signs that could indicate that someone is a victim of human trafficking:</p>
               <ul>
                   <li>Living with employer</li>

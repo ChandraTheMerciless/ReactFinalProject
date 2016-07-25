@@ -1,10 +1,14 @@
 .header {
 	text-align: center;
-	background-color: white;
+	/*background-color: white;*/
 	height: 100%;
 }
 
 .header a {
 	text-decoration: none;
-	color: green;
+	/*color: green;*/
+}
+
+.extra-bottom-space-15{
+	margin-bottom:15px;
 }

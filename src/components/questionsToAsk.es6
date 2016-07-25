@@ -4,7 +4,7 @@ export default class QuestionsToAsk extends React.Component {
     render() {
         return(
           <div>
-            	<h3>Questions to Ask</h3>
+            	<h3 className="text-primary">Questions to Ask</h3>
               <p>Always use caution when approaching someone whom you think is a victim of human trafficking, since their traffickers may be monitoring the victim&#8217;s movements. If you are able to safely engage a potential victim, here are some questions you may ask:</p>
               <ul>
                     <li>Can you leave your job if you want to?</li>
