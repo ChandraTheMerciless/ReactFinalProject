@@ -7,16 +7,21 @@ function getTime(locationIndex){
 	var geocoder = new google.maps.Geocoder();
 
 	//Returns a lat-long for the DeLorean
+	//see if this is best option, maybe should just return TZ
 	var location = geocoder.geocode({'address' : locationIndex}, getLatLong);
+	console.log(location)
+	console.log(location.summary)
+	console.log(location.summary.utc)
+	return location.summary.utc;
 }
 
 function getLatLong(results, status){
 	if (status === google.maps.GeocoderStatus.OK) {
-					handleResult(results[0].geometry.location);
-					// return results[0].geometry.location;
-				} else {
-					return ('error ' + status);
-				}
+		//fix for async issue
+		return handleResult(results[0].geometry.location);
+	} else {
+		return ('error ' + status);
+	}
 }
 
 function handleResult(latlongIndex) {
@@ -33,7 +38,7 @@ function handleResult(latlongIndex) {
 		type:"GET",
 		beforeSend: function(xhr){
 			//put authorization stuff here
-			//xhr.setRequestHeader('X-Mashape-Key', some other stuff);
+			xhr.setRequestHeader('X-Mashape-Key', "4YoO3CuIcImshazrBH6M9iZuEGWup1GQjfrjsnUL0YUhUSvGud");
 		},
 		success: function(data) {
 			console.log(data);
