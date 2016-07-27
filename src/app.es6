@@ -2,12 +2,12 @@ import React from 'react'
 import {render} from 'react-dom'
 import {Router, Route, Link, browserHistory, RouteHandler} from 'react-router'
 
-import TemplateLayout from '../components/templateLayout'
-import RedFlags from '../components/redFlags'
-import Home from '../components/home'
-import HowToHelp from '../components/howToHelp'
-import WorldClock from '../components/worldClock'
-import QuestionsToAsk from '../components/questionsToAsk'
+import TemplateLayout from './components/templateLayout'
+import RedFlags from './components/redFlags'
+import Home from './components/home'
+import HowToHelp from './components/howToHelp'
+import WorldClock from './components/worldClock'
+import QuestionsToAsk from './components/questionsToAsk'
 import { hashHistory } from 'react-router'
 
 ReactDOM.render((

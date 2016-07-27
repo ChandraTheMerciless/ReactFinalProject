@@ -4,7 +4,13 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
-    "build": "babel src/components -d lib/components && babel lib/components -d dist && browserify lib/components/*.js -o dist/app.js",
+    "buildOld": "babel src/components -d lib/components && babel lib/components -d dist && browserify lib/components/*.js -o dist/app.js",
+
+    "build": "babel src -d lib",
+    "pack": "webpack ./lib/app.js ./dist/app.js",
+
+    "prestart": "npm run build && npm run pack",
+
     "start": "http-server -p 5000",
     "react-run": "babel src/components -d lib/components && babel lib/components -d dist && browserify lib/components/*.js -o dist/app.js && http-server -p 5000",
     "test": "babel-node node_modules/mocha/bin/_mocha -- tests/*.js",
