@@ -1,12 +1,12 @@
 import React from 'react'
 
 export default class WorldClock extends React.Component {
-  
   constructor(props){
     //well the constructor function isn't breaking the build anymore, so we have that going for us :P
       super(props);
       console.log("CONSTRUCTOR FUNCTION");
-      this.state.timeZone = {timeZone:'Eastern'};
+      //this.state = [];
+      this.setState({timeZone:'Eastern'});
   }
 
 
@@ -18,8 +18,12 @@ export default class WorldClock extends React.Component {
     }
 
     render() {
+
+        initMap();
+
         return(
             <div id="worldClock">
+            <div id="dummyMap" onLoad="initMap()" hidden></div>
             <p>Please select a time zone.</p>
             	<button className="btn btn-info" id="translate">Translate this page</button>
             	<hr />
