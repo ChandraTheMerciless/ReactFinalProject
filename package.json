@@ -6,7 +6,9 @@
   "scripts": {
     "build": "babel src/components -d lib/components && babel lib/components -d dist && browserify lib/components/*.js -o dist/app.js",
     "start": "http-server -p 5000",
-    "react-run": "babel src/components -d lib/components && babel lib/components -d dist && browserify lib/components/*.js -o dist/app.js && http-server -p 5000"
+    "react-run": "babel src/components -d lib/components && babel lib/components -d dist && browserify lib/components/*.js -o dist/app.js && http-server -p 5000",
+    "test": "babel-node node_modules/mocha/bin/_mocha -- tests/*.js",
+    "coverage": "babel-node node_modules/isparta/bin/isparta cover --report html node_modules/mocha/bin/_mocha -- tests/*.js"
   },
   "author": "Chandra and Keith",
   "dependencies": {
@@ -31,6 +33,7 @@
     "isparta-instrumenter-loader": "^1.0.1",
     "jquery": "^3.1.0",
     "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.2.1",
     "unirest": "^0.5.0",
     "webpack": "^1.13.1"
   }
