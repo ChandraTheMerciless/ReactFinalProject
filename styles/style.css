@@ -12,3 +12,7 @@
 .extra-bottom-space-15{
 	margin-bottom:15px;
 }
+
+.hide-nav{
+	display:none;
+}
