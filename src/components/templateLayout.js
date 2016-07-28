@@ -1,7 +1,7 @@
 import React from 'react'
 import HotlineAndWebsite from '../components/hotlineAndWebsite'
-import TemplateNeedHelp from '../components/templateNeedHelp'
-import TemplateWantToHelp from '../components/templateWantToHelp'
+// import TemplateNeedHelp from '../components/templateNeedHelp'
+// import TemplateWantToHelp from '../components/templateWantToHelp'
 import { Link } from 'react-router'
 
 export default class TemplateLayout extends React.Component {
@@ -27,6 +27,11 @@ export default class TemplateLayout extends React.Component {
         // setState({navStatus: "forHelp"});
     }
 
+    hideBothNavs(){
+        $("#need-help-container").addClass("hide-nav");
+        $("#want-to-help-container").addClass("hide-nav");
+    }
+
 
     render() {
         return (<div className="container-fluid">
@@ -39,10 +44,15 @@ export default class TemplateLayout extends React.Component {
                         </div>
 
                         <div id="want-to-help-container" className="hide-nav">
-                            <TemplateWantToHelp />
+                            <Link to="/" onClick={this.hideBothNavs.bind(this)}>Home </Link> |
+                            <Link to="/redFlags"> Red Flags </Link> |
+                            <Link to="/questionsToAsk"> Questions to Ask</Link> |
+                            <Link to="/howToHelp"> How to Help </Link>
+
                         </div>
                         <div id="need-help-container" className="hide-nav">
-                            <TemplateNeedHelp />
+                            <Link to="/" onClick={this.hideBothNavs.bind(this)}>Home </Link> |
+                            <Link to="/worldClock"> World Clock</Link>
                         </div>
                     </header>
                         <hr />
