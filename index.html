@@ -13,21 +13,14 @@
 </head>
 <body>
 <div id="app"></div>
-<div id="dummyMap" onload="initMap()" hidden></div>
+<div id="gMap" onload="initMap()" hidden></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnW8ugwK4NDDH6JcAxo2c3xntChwxIwdU&callback=initMap" async defer></script>
 
-<script src="deLorean.js"></script>
+<script src="utility_js/deLorean.js"></script>
 <script src="dist/app.js"></script>
 
-<script>
-function initMap() {
-	var map = new google.maps.Map(document.getElementById('dummyMap'), {
-    zoom: 8,
-    center: {lat: -34.397, lng: 150.644}
-  })
-}
-</script>
+<script src="utility_js/googleMapInit.js"></script>
 
 </body>
 </html>
