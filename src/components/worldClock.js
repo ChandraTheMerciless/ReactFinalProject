@@ -1,20 +1,18 @@
 import React from 'react'
 
 export default class WorldClock extends React.Component {
-  constructor(props){
-    //well the constructor function isn't breaking the build anymore, so we have that going for us :P
-      super(props);
-      console.log("CONSTRUCTOR FUNCTION");
-      //this.state = [];
-      this.setState({timeZone:'Eastern'});
-  }
 
+    constructor(props) {
+      super(props);
+
+      this.render = this.render.bind(this);
+     }
 
     addTimeZone() {
         //from scott: attempt to use custom event watcher, use DOM Object for time
         var location = document.getElementById("worldClock--search").value;
         console.log(location);
-        this.state.timeZone = deLorean.getTime(location);
+        setState({timeZone:"Eastern"});
     }
 
     render() {
@@ -35,7 +33,7 @@ export default class WorldClock extends React.Component {
                         <div id="worldClock__inputForm--wrapper">
                             <form id="worldClock__inputForm">
                                 <input className="form-control" id="worldClock--search" type="text" />
-                                <button className="btn btn-info" id="worldClock--searchButton" type="button" onClick={this.addTimeZone.bind()}>Search Location</button>
+                                <button className="btn btn-info" id="worldClock--searchButton" type="button" onClick={this.addTimeZone.bind(this)}>Search Location</button>
                             </form>
                         </div>
                         <div id="worldClock__output--wrapper">
