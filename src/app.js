@@ -8,7 +8,11 @@ import Home from './components/home'
 import HowToHelp from './components/howToHelp'
 import WorldClock from './components/worldClock'
 import QuestionsToAsk from './components/questionsToAsk'
+import WhereAmI from './components/whereAmI'
+import PhoneHistoryHelp from './components/phoneHistoryHelp'
 import { hashHistory } from 'react-router'
+
+//<Router history={browserHistory}>
 
 ReactDOM.render((
     <Router history={hashHistory}>
@@ -18,6 +22,8 @@ ReactDOM.render((
             <Route path="/howToHelp" component={HowToHelp} />
             <Route path="/worldClock" component={WorldClock} />
             <Route path="/questionsToAsk" component={QuestionsToAsk} />
+            <Route path="/whereAmI" component={WhereAmI} />
+            <Route path="/phoneHistoryHelp" component={PhoneHistoryHelp} />
         </Route>
     </Router>
 ), document.getElementById('app'));
