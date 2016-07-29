@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for components/home.js</title>
+    <title>Code coverage report for components/questionsToAsk.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../index.html">all files</a> / <a href="index.html">components/</a> home.js
+      <a href="../index.html">all files</a> / <a href="index.html">components/</a> questionsToAsk.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">93.75% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>45/48</span>
+        <span class='fraction'>42/42</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,15 +32,15 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>12/12</span>
+        <span class='fraction'>10/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>6/9</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y'>
-        <span class="strong">4 statements, 2 functions, 13 branches</span>
+        <span class="strong">4 statements, 13 branches</span>
         <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
@@ -72,38 +72,24 @@
 23
 24
 25
-26
-27
-28
-29
-30
-31
-32
-33</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+26</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -112,36 +98,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
-import { Link } from 'react-router'
 &nbsp;
-export default class Home extends React.Component {
-&nbsp;
-  //state instantiation
-  constructor(props) {
-    super(props);
-&nbsp;
-    this.render = this.render.bind(this);
-   }
-&nbsp;
-  setToHelp(){
-    // setState({navStatus: "toHelp"});
-<span class="cstat-no" title="statement not covered" >    c</span>onsole.log("to help");
-  }
-&nbsp;
-  setForHelp(){
-<span class="cstat-no" title="statement not covered" >    c</span>onsole.log("for help");
-<span class="cstat-no" title="statement not covered" >    v</span>ar routeForHelp = document.getElementById("need-help");
-    // setState({navStatus: "forHelp"});
-  }
-&nbsp;
-  render() {
-      return(
+export default class QuestionsToAsk extends React.Component {
+    render() {
+        return(
           &lt;div&gt;
-              &lt;Link className="btn btn-info btn-lg btn-block extra-bottom-space-15" to="/howToHelp" onClick={this.setToHelp.bind(this)}&gt;I want to help&lt;/Link&gt;
-              &lt;Link className="btn btn-info btn-lg btn-block extra-bottom-space-15" to="/worldClock" onClick={this.setForHelp.bind(this)}&gt; I need help&lt;/Link&gt;
-      	  &lt;/div&gt;
-      )
-  }
+            	&lt;h3 className="text-primary"&gt;Questions to Ask&lt;/h3&gt;
+              &lt;p&gt;Always use caution when approaching someone whom you think is a victim of human trafficking, since their traffickers may be monitoring the victim&amp;#8217;s movements. If you are able to safely engage a potential victim, here are some questions you may ask:&lt;/p&gt;
+              &lt;ul&gt;
+                    &lt;li&gt;Can you leave your job if you want to?&lt;/li&gt;
+                    &lt;li&gt;Can you come and go as you please?&lt;/li&gt;
+                    &lt;li&gt;Have you been hurt or threatened if you tried to leave?&lt;/li&gt;
+                    &lt;li&gt;Has your family been threatened?&lt;/li&gt;
+                    &lt;li&gt;Do you live with your employer?&lt;/li&gt;
+                    &lt;li&gt;Where do you sleep and eat?&lt;/li&gt;
+                    &lt;li&gt;Are you in debt to your employer?&lt;/li&gt;
+                    &lt;li&gt;Do you have your passport/identification? Who has it?&lt;/li&gt;
+              &lt;/ul&gt;
+&nbsp;
+              &lt;p&gt;For more information on identifying a potential human trafficking situation, please visit:&lt;/p&gt;
+              &lt;p&gt;&lt;a href="http://www.state.gov/j/tip/id/"&gt;US Department of State: Identify and Assist a Trafficking Victim&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+        );
+    }
 }
 &nbsp;</pre></td></tr>
 </table></pre>
