@@ -34,29 +34,47 @@ export default class TemplateLayout extends React.Component {
 
 
     render() {
-        return (<div className="container-fluid">
+        return (<div>
                     <header className="header">
-                        <HotlineAndWebsite />
+                    <HotlineAndWebsite />
+                        <nav className="navbar navbar-default">
+                          <div className="container-fluid">
 
-                        <div id="routing-btns">
-                        <Link className="" to="/howToHelp" onClick={this.setToHelp.bind(this)}>I want to help</Link>
-                        <Link className="" to="/worldClock" onClick={this.setForHelp.bind(this)}> I need help</Link>
-                        </div>
+                            <div className="navbar-header">
+                              <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span className="sr-only">Toggle navigation</span>
+                                <span className="icon-bar"></span>
+                                <span className="icon-bar"></span>
+                                <span className="icon-bar"></span>
+                              </button>
+                              <span className="navbar-brand">
+                                  Brand
+                              </span>
+                            </div>
 
-                        <div id="want-to-help-container" className="hide-nav">
-                            <Link to="/" onClick={this.hideBothNavs.bind(this)}>Home </Link> |
-                            <Link to="/redFlags"> Red Flags </Link> |
-                            <Link to="/questionsToAsk"> Questions to Ask</Link> |
-                            <Link to="/howToHelp"> How to Help </Link>
+                            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <ul className="nav navbar-nav">
+                                <li><Link className="" to="/howToHelp" onClick={this.setToHelp.bind(this)}>I want to help</Link></li>
+                                <li><Link className="" to="/worldClock" onClick={this.setForHelp.bind(this)}> I need help</Link></li>
+                              </ul>
 
-                        </div>
-                        <div id="need-help-container" className="hide-nav">
-                            <Link to="/" onClick={this.hideBothNavs.bind(this)}>Home </Link> |
-                            <Link to="/worldClock"> World Clock</Link>
-                        </div>
+                              <ul id="want-to-help-container" className="nav navbar-nav navbar-right hide-nav">
+                                  <li><Link to="/" onClick={this.hideBothNavs.bind(this)}>Home </Link></li>
+                                  <li><Link to="/redFlags"> Red Flags </Link></li>
+                                  <li><Link to="/questionsToAsk"> Questions to Ask</Link></li>
+                                  <li><Link to="/howToHelp"> How to Help </Link></li>
+                              </ul>
+
+                              <ul id="need-help-container" className="nav navbar-nav navbar-right hide-nav">
+                                  <li><Link to="/" onClick={this.hideBothNavs.bind(this)}>Home </Link></li>
+                                  <li><Link to="/worldClock"> World Clock</Link></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </nav>
+
                     </header>
-                        <hr />
-                        <div>
+                        <div className="container-fluid">
                             {this.props.children}
                         </div>
                 </div>);
