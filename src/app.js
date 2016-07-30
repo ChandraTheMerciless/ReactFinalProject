@@ -11,15 +11,20 @@ import QuestionsToAsk from './components/questionsToAsk'
 import WhereAmI from './components/whereAmI'
 import PhoneHistoryHelp from './components/phoneHistoryHelp'
 import INeedHelp from './components/iNeedHelp'
+import QuickExit from './components/quickExit'
 import { hashHistory } from 'react-router'
 
 //<Router history={browserHistory}>
 
-//  componentDidMount(){
-//    var self = this;
-//    var store = this.props.store;
-//    this.state = {};
-// }
+function componentDidMount(){
+   var self = this;
+   var store = this.props.store;
+   this.state = {};
+};
+
+function shouldComponentUpdate(nextProps, nextState) {
+  return true;
+}
 
 ReactDOM.render((
     <Router history={hashHistory}>
@@ -32,6 +37,7 @@ ReactDOM.render((
             <Route path="/whereAmI" component={WhereAmI} />
             <Route path="/phoneHistoryHelp" component={PhoneHistoryHelp} />
             <Route path="/iNeedHelp" component={INeedHelp} />
+            <Route path="/quickExit" component={INeedHelp} />
         </Route>
     </Router>
 ), document.getElementById('app'));
