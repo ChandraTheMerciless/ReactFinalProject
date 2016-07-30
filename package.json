@@ -4,15 +4,10 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
-    "buildOld": "babel src/components -d lib/components && babel lib/components -d dist && browserify lib/components/*.js -o dist/app.js",
-
     "build": "babel src -d lib",
     "pack": "webpack ./lib/app.js ./dist/app.js",
-
     "prestart": "npm run build && npm run pack",
-
     "start": "http-server -p 5000",
-    "react-run": "babel src/components -d lib/components && babel lib/components -d dist && browserify lib/components/*.js -o dist/app.js && http-server -p 5000",
     "test": "babel-node node_modules/mocha/bin/_mocha -- tests/*.js",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover --report html node_modules/mocha/bin/_mocha -- tests/*.js"
   },
@@ -20,9 +15,11 @@
   "dependencies": {
     "babel-cli": "^6.10.1",
     "bootstrap": "^3.3.6",
+    "chart.js": "^1.1.1",
     "http-server": "^0.9.0",
     "jquery": "^2.0.0",
     "react": "^15.2.1",
+    "react-chartjs": "^0.8.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.6.0",
