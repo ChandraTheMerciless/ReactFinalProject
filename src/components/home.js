@@ -25,7 +25,7 @@ export default class Home extends React.Component {
       return(
           <div>
               <Link className="btn btn-info btn-lg btn-block extra-bottom-space-15" to="/howToHelp" onClick={this.setToHelp.bind(this)}>I want to help</Link>
-              <Link className="btn btn-info btn-lg btn-block extra-bottom-space-15" to="/worldClock" onClick={this.setForHelp.bind(this)}> I need help</Link>
+              <Link className="btn btn-info btn-lg btn-block extra-bottom-space-15" to="/iNeedHelp" onClick={this.setForHelp.bind(this)}> I need help</Link>
       	  </div>
       )
   }

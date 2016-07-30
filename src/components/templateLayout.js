@@ -1,8 +1,8 @@
 import React from 'react'
 import HotlineAndWebsite from '../components/hotlineAndWebsite'
-// import TemplateNeedHelp from '../components/templateNeedHelp'
-// import TemplateWantToHelp from '../components/templateWantToHelp'
-import { Link } from 'react-router'
+import TemplateNeedHelp from '../components/templateNeedHelp'
+import TemplateWantToHelp from '../components/templateWantToHelp'
+import {Router, Route, Link, browserHistory, RouteHandler} from 'react-router'
 
 export default class TemplateLayout extends React.Component {
     //state instantiation
@@ -55,7 +55,7 @@ export default class TemplateLayout extends React.Component {
                             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul className="nav navbar-nav">
                                 <li><Link className="" to="/howToHelp" onClick={this.setToHelp.bind(this)}>I want to help</Link></li>
-                                <li><Link className="" to="/worldClock" onClick={this.setForHelp.bind(this)}> I need help</Link></li>
+                                <li><Link className="" to="/iNeedHelp" onClick={this.setForHelp.bind(this)}> I need help</Link></li>
                               </ul>
 
                               <ul id="want-to-help-container" className="nav navbar-nav navbar-right hide-nav">
@@ -68,6 +68,8 @@ export default class TemplateLayout extends React.Component {
                               <ul id="need-help-container" className="nav navbar-nav navbar-right hide-nav">
                                   <li><Link to="/" onClick={this.hideBothNavs.bind(this)}>Home </Link></li>
                                   <li><Link to="/worldClock"> World Clock</Link></li>
+                                  <li><Link to="/phoneHistoryHelp"> How to Delete Phone History</Link></li>
+                                  <li><Link to="/quickExit" color="red"> Escape!!!</Link></li>
                               </ul>
                             </div>
                           </div>

@@ -10,9 +10,16 @@ import WorldClock from './components/worldClock'
 import QuestionsToAsk from './components/questionsToAsk'
 import WhereAmI from './components/whereAmI'
 import PhoneHistoryHelp from './components/phoneHistoryHelp'
+import INeedHelp from './components/iNeedHelp'
 import { hashHistory } from 'react-router'
 
 //<Router history={browserHistory}>
+
+//  componentDidMount(){
+//    var self = this;
+//    var store = this.props.store;
+//    this.state = {};
+// }
 
 ReactDOM.render((
     <Router history={hashHistory}>
@@ -24,6 +31,7 @@ ReactDOM.render((
             <Route path="/questionsToAsk" component={QuestionsToAsk} />
             <Route path="/whereAmI" component={WhereAmI} />
             <Route path="/phoneHistoryHelp" component={PhoneHistoryHelp} />
+            <Route path="/iNeedHelp" component={INeedHelp} />
         </Route>
     </Router>
 ), document.getElementById('app'));
