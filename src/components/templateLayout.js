@@ -5,33 +5,50 @@ import TemplateWantToHelp from '../components/templateWantToHelp'
 import {Router, Route, Link, browserHistory, RouteHandler} from 'react-router'
 
 export default class TemplateLayout extends React.Component {
-    //state instantiation
-    constructor(props) {
-      super(props);
+  //state instantiation
+  constructor(props) {
+    super(props);
 
-      this.render = this.render.bind(this);
-     }
+    this.state = {};
 
-    setToHelp(){
-        // setState({navStatus: "toHelp"});
-        console.log("to help??");
-        $("#want-to-help-container").removeClass("hide-nav");
-        $("#need-help-container").addClass("hide-nav");
-    }
+    this.render = this.render.bind(this);
+  }
 
-    setForHelp(){
-        console.log("for help?");
-        var routeForHelp = document.getElementById("need-help");
-        $("#want-to-help-container").addClass("hide-nav");
-        $("#need-help-container").removeClass("hide-nav");
-        // setState({navStatus: "forHelp"});
-    }
+  componentWillMount(){
+    
+    self = this;
 
-    hideBothNavs(){
-        $("#need-help-container").addClass("hide-nav");
-        $("#want-to-help-container").addClass("hide-nav");
-    }
+    this.state = self;
 
+    this.state = {};
+
+    return true;
+  }
+
+  componentDidMount(){
+    this.state = {};
+
+  }
+
+  setToHelp(){
+      // setState({navStatus: "toHelp"});
+      console.log("to help??");
+      $("#want-to-help-container").addClass("hide-nav");
+      $("#need-help-container").removeClass("hide-nav");
+  }
+
+  setForHelp(){
+      console.log("for help?");
+      var routeForHelp = document.getElementById("need-help");
+      $("#want-to-help-container").removeClass("hide-nav");
+      $("#need-help-container").addClass("hide-nav");
+      // setState({navStatus: "forHelp"});
+  }
+
+  hideBothNavs(){
+      $("need-help-container").addClass("hide-nav");
+      $("#want-to-help-container").addClass("hide-nav")
+  }
 
     render() {
         return (<div>

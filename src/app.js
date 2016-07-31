@@ -16,16 +16,6 @@ import { hashHistory } from 'react-router'
 
 //<Router history={browserHistory}>
 
-function componentDidMount(){
-   var self = this;
-   var store = this.props.store;
-   this.state = {};
-};
-
-function shouldComponentUpdate(nextProps, nextState) {
-  return true;
-}
-
 ReactDOM.render((
     <Router history={hashHistory}>
         <Route component={TemplateLayout}>
