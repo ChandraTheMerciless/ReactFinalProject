@@ -13,19 +13,19 @@ export default class DonutChartStats extends React.Component {
   componentDidMount() {
     let options = {
         title: 'Human Trafficking Statistics Placeholder',
-        hAxis: {title: 'Year', minValue: 2011, maxValue: 2016},
-        vAxis: {title: 'Cases', minValue: 0, maxValue: 100},
-        legend: 'none'
+        // hAxis: {title: 'Types of Trafficking', minValue: 2011, maxValue: 2016},
+        // vAxis: {title: 'Cases', minValue: 0, maxValue: 100},
+        pieHole: ':0.4'
     };
 
     let data = [
-        ['Year', 'Cases'],
-        [ 2011,      18],
-        [ 2012,      35],
-        [ 2013,     44],
-        [ 2014,      70],
-        [ 2015,      50],
-        [ 2016,    60]
+        ['Types of Trafficking', 'Percentage'],
+        [ "Type 1",    20],
+        [ "Type 2",    10],
+        [ "Type 3",    30],
+        [ "Type 4",    20],
+        [ "Type 5",    10],
+        [ "Type 6",    10]
     ];
     this.setState({
         'data' : data,

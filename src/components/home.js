@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import ScatterChartStats from './scatterChartStats.js';
-// import DonutChartStats from './donutChartStats.js'
+import DonutChartStats from './donutChartStats.js'
 
 
 export default class Home extends React.Component {
@@ -26,7 +25,7 @@ export default class Home extends React.Component {
   render() {
       return(
           <div>
-              <ScatterChartStats />
+              <DonutChartStats />
       	  </div>
       )
   }
