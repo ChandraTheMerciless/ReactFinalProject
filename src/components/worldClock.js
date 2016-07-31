@@ -46,7 +46,7 @@ export default class WorldClock extends React.Component {
             <div id="worldClock">
             <div id="dummyMap" onLoad="initMap()" hidden></div>
             <p>Please select a time zone.</p>
-            	<button className="btn btn-info" id="translate">Translate this page</button>
+            	<button className="btn btn-info" id="translate" onClick={console.log("Translate")}>Translate this page</button>
             	<hr />
             	<div className="worldClock__main">
             		<div id="worldClock__selection">
@@ -61,7 +61,9 @@ export default class WorldClock extends React.Component {
                         </div>
                         <div id="worldClock__output--wrapper">
                             <p id="worldClock__output--selection">Output Time</p>
-                            <input id="worldClock--formatSelector" type="Radio" />
+                            <br />
+                            <button id="worldClock--formatSelector" type="Radio">12HR</button>
+                            <button id="worldClock--formatSelector" type="Radio">24HR</button>
                         </div>
             		</div>
            		</div>
