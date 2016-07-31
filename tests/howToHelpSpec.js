@@ -13,10 +13,6 @@ describe('HowToHelp', () => {
     const wrapper = render(<HowToHelp />);
 
     it('should contain some info on how to help', () => {
-      expect(wrapper.text()).to.contain('');
+      expect(wrapper.text()).to.contain('How to Help');
     });
-
-    // it('run set for help setup', () => {
-    //   expect(component.setForHelp).to.have.been.called();
-    // })
 });

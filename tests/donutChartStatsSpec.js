@@ -2,11 +2,11 @@ import React from 'react'
 import TestUtils from 'react-addons-test-utils'
 
 import { Link } from 'react-router'
-import Home from '../src/components/home';
+import DonutChartStats from '../src/components/donutChartStats';
 import { assert } from 'chai'
 
-describe('Home', () => {
-    var component = <Home />;
+describe('DonutChartStats', () => {
+    var component = <DonutChartStats />;
 
     it('should exist', () => {
       assert.isOk(component);

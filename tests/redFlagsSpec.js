@@ -15,8 +15,4 @@ describe('RedFlags', () => {
     it('should contain text on red flags', () => {
       expect(wrapper.text()).to.contain("Employer is holding identity documents");
     });
-
-    // it('run set for help setup', () => {
-    //   expect(component.setForHelp).to.have.been.called();
-    // })
 });

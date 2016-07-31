@@ -1,7 +1,4 @@
 import React from 'react'
-import HotlineAndWebsite from '../components/hotlineAndWebsite'
-import TemplateNeedHelp from '../components/templateNeedHelp'
-import TemplateWantToHelp from '../components/templateWantToHelp'
 import {Router, Route, Link, browserHistory, RouteHandler} from 'react-router'
 
 export default class TemplateLayout extends React.Component {
@@ -18,7 +15,7 @@ export default class TemplateLayout extends React.Component {
 
   componentWillMount(){
 
-    self = this;
+    var self = this;
 
     this.state = self;
 
@@ -69,14 +66,14 @@ export default class TemplateLayout extends React.Component {
                                 <span className="icon-bar"></span>
                               </button>
                               <span className="navbar-brand">
-                                  Brand
+                                  2Help 4Help
                               </span>
                             </div>
 
                             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul className="nav navbar-nav">
-                                <li><Link className="" to="#" onClick={this.setToHelp.bind(this)}>I want to help</Link></li>
-                                <li><Link className="" to="#" onClick={this.setForHelp.bind(this)}> I need help</Link></li>
+                                <li><button className="btn btn-link nav-btn-custom" onClick={this.setToHelp.bind(this)}>I Want to Help</button></li>
+                                <li><button className="btn btn-link nav-btn-custom" onClick={this.setForHelp.bind(this)}> I Need Help</button></li>
                               </ul>
 
                               <ul id="want-to-help-container" className="nav navbar-nav navbar-right hide-nav">

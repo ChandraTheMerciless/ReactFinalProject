@@ -14,13 +14,18 @@ footer{
 
 .header {
 	text-align: center;
-	/*background-color: white;*/
 	height: 100%;
 }
 
-.header a {
+.header a,
+.btn-link:hover,
+.btn-link:active,
+.btn-link:focus{
 	text-decoration: none;
-	/*color: green;*/
+}
+
+.nav-btn-custom{
+	margin-top:5px;
 }
 
 .extra-bottom-space-15{
