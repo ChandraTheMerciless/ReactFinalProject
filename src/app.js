@@ -27,7 +27,7 @@ ReactDOM.render((
             <Route path="/whereAmI" component={WhereAmI} />
             <Route path="/phoneHistoryHelp" component={PhoneHistoryHelp} />
             <Route path="/iNeedHelp" component={INeedHelp} />
-            <Route path="/quickExit" component={INeedHelp} />
+            <Route path="/quickExit" component={QuickExit} />
         </Route>
     </Router>
 ), document.getElementById('app'));

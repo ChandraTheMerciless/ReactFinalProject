@@ -87,7 +87,7 @@ export default class TemplateLayout extends React.Component {
                                   <li><Link to="/" onClick={this.hideBothNavs.bind(this)}>Home </Link></li>
                                   <li><Link to="/worldClock"> World Clock</Link></li>
                                   <li><Link to="/phoneHistoryHelp"> How to Delete Phone History</Link></li>
-                                  <li><Link to="/quickExit" color="red"> Escape!!!</Link></li>
+                                  <li><Link to="/quickExit"> Escape!!!</Link></li>
                               </ul>
                             </div>
                           </div>
