@@ -1,30 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router'
+import ScatterChartStats from './scatterChartStats.js';
+// import DonutChartStats from './donutChartStats.js'
+
 
 export default class Home extends React.Component {
 
   //state instantiation
-constructor(props) {
-  super(props);
+  constructor(props) {
+    super(props);
 
-  this.render = this.render.bind(this);
-}
+    this.render = this.render.bind(this);
+  }
 
-componentDidMount(){
-  var self = this;
-  var store = this.props.store;
-  this.state = {};
-}   
+  componentDidMount(){
+    var self = this;
+    var store = this.props.store;
+    this.state = {};
+  }
 
-componentWillMount(){
-  //stuff
-}
+  componentWillMount(){
+    //stuff
+  }
 
   render() {
       return(
           <div>
-              <Link className="btn btn-info btn-lg btn-block extra-bottom-space-15" to="/howToHelp">I want to help</Link>
-              <Link className="btn btn-info btn-lg btn-block extra-bottom-space-15" to="/iNeedHelp"> I need help</Link>
+              <ScatterChartStats />
       	  </div>
       )
   }

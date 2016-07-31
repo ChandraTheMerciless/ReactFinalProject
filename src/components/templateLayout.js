@@ -5,7 +5,7 @@ import TemplateWantToHelp from '../components/templateWantToHelp'
 import {Router, Route, Link, browserHistory, RouteHandler} from 'react-router'
 
 export default class TemplateLayout extends React.Component {
-  
+
 
   //state instantiation
   constructor(props) {
@@ -17,7 +17,7 @@ export default class TemplateLayout extends React.Component {
   }
 
   componentWillMount(){
-    
+
     self = this;
 
     this.state = self;
@@ -37,7 +37,7 @@ export default class TemplateLayout extends React.Component {
       console.log("to help??");
       $("#want-to-help-container").removeClass("hide-nav");
       $("#need-help-container").addClass("hide-nav");
-      this.props.children = `<Link to="/worldClock"> World Clock</Link>`;
+      this.props.children = '<Link to="/worldClock"> World Clock</Link>';
   }
 
   setForHelp(){
@@ -45,7 +45,7 @@ export default class TemplateLayout extends React.Component {
       var routeForHelp = document.getElementById("need-help");
       $("#want-to-help-container").addClass("hide-nav");
       $("#need-help-container").removeClass("hide-nav");
-      this.props.children = `<Link to="/worldClock"> World Clock</Link>`;
+      this.props.children = '<Link to="/worldClock"> World Clock</Link>';
       // setState({navStatus: "forHelp"});
   }
 
@@ -57,7 +57,7 @@ export default class TemplateLayout extends React.Component {
     render() {
         return (<div>
                     <header className="header">
-                    <HotlineAndWebsite />
+
                         <nav className="navbar navbar-default">
                           <div className="container-fluid">
 
@@ -75,8 +75,8 @@ export default class TemplateLayout extends React.Component {
 
                             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul className="nav navbar-nav">
-                                <li><Link className="" to="/howToHelp" onClick={this.setToHelp.bind(this)}>I want to help</Link></li>
-                                <li><Link className="" to="/iNeedHelp" onClick={this.setForHelp.bind(this)}> I need help</Link></li>
+                                <li><Link className="" to="#" onClick={this.setToHelp.bind(this)}>I want to help</Link></li>
+                                <li><Link className="" to="#" onClick={this.setForHelp.bind(this)}> I need help</Link></li>
                               </ul>
 
                               <ul id="want-to-help-container" className="nav navbar-nav navbar-right hide-nav">
