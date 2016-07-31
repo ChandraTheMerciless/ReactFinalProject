@@ -19,7 +19,6 @@
     "jquery": "^2.0.0",
     "react": "^15.2.1",
     "react-dom": "^15.1.0",
-    "react-google-charts": "^1.0.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.6.0",
     "redux": "^3.5.2"
