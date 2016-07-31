@@ -2,22 +2,45 @@ import React from 'react'
 
 export default class WorldClock extends React.Component {
 
+    //state instantiation
     constructor(props) {
-      super(props);
+        super(props);
 
-      this.render = this.render.bind(this);
-     }
+        this.state = {};
+
+        this.render = this.render.bind(this);
+    }
+
+    componentWillMount(){
+    
+    self = this;
+
+    this.state = self;
+
+    this.state = {timezone: "Eastern"};
+
+    return true;
+    }
+
+    componentDidMount(){
+        this.state = {timezone: location};
+
+    }
 
     addTimeZone() {
         //from scott: attempt to use custom event watcher, use DOM Object for time
         var location = document.getElementById("worldClock--search").value;
+        //TODO remove console logs
         console.log(location);
-        setState({timeZone:"Eastern"});
+        vacation = getTimeZone(location);
+        console.log(location);
+        this.state = {
+            timeZone:"Eastern",
+            savedLocation: location
+        };
     }
 
     render() {
-
-        initMap();
 
         return(
             <div id="worldClock">
@@ -37,7 +60,7 @@ export default class WorldClock extends React.Component {
                             </form>
                         </div>
                         <div id="worldClock__output--wrapper">
-                            <p id="worldClock__output--selection">{this.state.timeZone}</p>
+                            <p id="worldClock__output--selection">Output Time</p>
                             <input id="worldClock--formatSelector" type="Radio" />
                         </div>
             		</div>

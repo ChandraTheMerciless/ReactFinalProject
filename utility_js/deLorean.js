@@ -3,7 +3,7 @@
 // var $ = require('jQuery');
 // var DeLoreanGeocoder = require('../src/deLoreanGeocoder.js');
 
-function getTime(locationIndex){
+function getTimeZone(locationIndex){
 	var geocoder = new google.maps.Geocoder();
 
 	//Returns a lat-long for the DeLorean

@@ -5,6 +5,8 @@ import TemplateWantToHelp from '../components/templateWantToHelp'
 import {Router, Route, Link, browserHistory, RouteHandler} from 'react-router'
 
 export default class TemplateLayout extends React.Component {
+  
+
   //state instantiation
   constructor(props) {
     super(props);
@@ -33,15 +35,17 @@ export default class TemplateLayout extends React.Component {
   setToHelp(){
       // setState({navStatus: "toHelp"});
       console.log("to help??");
-      $("#want-to-help-container").addClass("hide-nav");
-      $("#need-help-container").removeClass("hide-nav");
+      $("#want-to-help-container").removeClass("hide-nav");
+      $("#need-help-container").addClass("hide-nav");
+      this.props.children = `<Link to="/worldClock"> World Clock</Link>`;
   }
 
   setForHelp(){
       console.log("for help?");
       var routeForHelp = document.getElementById("need-help");
-      $("#want-to-help-container").removeClass("hide-nav");
-      $("#need-help-container").addClass("hide-nav");
+      $("#want-to-help-container").addClass("hide-nav");
+      $("#need-help-container").removeClass("hide-nav");
+      this.props.children = `<Link to="/worldClock"> World Clock</Link>`;
       // setState({navStatus: "forHelp"});
   }
 
