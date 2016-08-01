@@ -10,6 +10,7 @@
     "start": "http-server -p 5000",
     "test": "babel-node node_modules/mocha/bin/_mocha -- tests/*.js",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover --report html node_modules/mocha/bin/_mocha -- tests/*.js",
+    "cover": "npm run test && npm run coverage",
     "present": "npm run prestart && npm run test && npm run coverage && npm run start"
   },
   "author": "Chandra and Keith",
