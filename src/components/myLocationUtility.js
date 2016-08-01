@@ -2,6 +2,31 @@ import React from 'react'
 
 export default class WorldClock extends React.Component {
 
+	    //state instantiation
+    constructor(props) {
+        super(props);
+
+        this.state = {};
+
+        this.render = this.render.bind(this);
+    }
+
+    componentWillMount(){
+
+	    var self = this;
+
+	    this.state = self;
+
+	    this.state = {};
+
+    	return true;
+    }
+
+    componentDidMount(){
+        this.state = {};
+
+    }
+
 	findLocation(){
 
 		if (navigator.geolocation) {
@@ -30,6 +55,13 @@ export default class WorldClock extends React.Component {
 		        'Error: The Geolocation service failed.' :
 		        'Error: Your browser doesn\'t support geolocation.'
 		    );
+		}
+
+		//for test runner
+		render(){
+			return(
+				<div hidden>words</div>
+			)
 		}
 }
 

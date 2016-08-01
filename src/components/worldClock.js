@@ -14,13 +14,13 @@ export default class WorldClock extends React.Component {
 
     componentWillMount(){
 
-    var self = this;
+        var self = this;
 
-    this.state = self;
+        this.state = self;
 
-    this.state = {timezone: "Eastern"};
+        this.state = {timezone: "Eastern"};
 
-    return true;
+        return true;
     }
 
     componentDidMount(){
