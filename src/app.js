@@ -12,6 +12,7 @@ import WhereAmI from './components/whereAmI'
 import PhoneHistoryHelp from './components/phoneHistoryHelp'
 import INeedHelp from './components/iNeedHelp'
 import QuickExit from './components/quickExit'
+//import DeLorean from './components/DeLorean'
 import { hashHistory } from 'react-router'
 
 //<Router history={browserHistory}>

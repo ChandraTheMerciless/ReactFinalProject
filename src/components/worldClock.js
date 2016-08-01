@@ -1,4 +1,5 @@
 import React from 'react'
+import DeLorean from '../components/deLorean.js'
 
 export default class WorldClock extends React.Component {
 
@@ -32,7 +33,7 @@ export default class WorldClock extends React.Component {
         var location = document.getElementById("worldClock--search").value;
         //TODO remove console logs
         console.log(location);
-        vacation = getTimeZone(location);
+        vacation = DeLorean.getTimeZone(location);
         console.log(location);
         this.state = {
             timeZone:"Eastern",
@@ -44,7 +45,7 @@ export default class WorldClock extends React.Component {
 
         return(
             <div id="worldClock">
-            <h3 className="text-primary">World Clock</h3>
+            <h3 className="text-primary">Welcome to the World Clock page</h3>
             <div id="dummyMap" onLoad="initMap()" hidden></div>
             <p>Please select a time zone.</p>
             	<button className="btn btn-info" id="translate" onClick={console.log("Translate")}>Translate this page</button>
