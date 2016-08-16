@@ -15,4 +15,8 @@ describe('Home', () => {
     it('should contain text on questions to ask', () => {
       expect(wrapper.text()).to.contain('Can you leave your job if you want to');
     });
+
+    it('should exist', () => {
+      assert.isOk(component);
+    });
 });

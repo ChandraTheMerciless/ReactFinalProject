@@ -15,4 +15,8 @@ describe('Home', () => {
     it('should contain static page text', () => {
       expect(wrapper.text()).to.contain('I Need Help');
     });
+
+    it('should exist', () => {
+      assert.isOk(component);
+    });
 });

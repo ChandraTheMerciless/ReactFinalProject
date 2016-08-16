@@ -12,7 +12,11 @@ describe('DeLorean', () => {
 
     const wrapper = render(<DeLorean />);
 
-    it('should test', () => {
+    it('should contain text test', () => {
       expect(wrapper.text()).to.contain('Testing Delorean Test');
+    });
+
+    it('should exist', () => {
+      assert.isOk(component);
     });
 });

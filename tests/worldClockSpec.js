@@ -15,4 +15,9 @@ describe('WorldClock', () => {
     it('should contain text on world clock', () => {
       expect(wrapper.text()).to.contain('Welcome to the World Clock page');
     });
+
+    it('should exist', () => {
+      assert.isOk(component);
+    });
+    
 });

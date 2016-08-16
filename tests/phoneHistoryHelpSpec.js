@@ -15,4 +15,8 @@ describe('PhoneHistoryHelp', () => {
     it('should contain text on phone history', () => {
       expect(wrapper.text()).to.contain("Here's how to clear your phone's browser history");
     });
+
+    it('should exist', () => {
+      assert.isOk(component);
+    });
 });

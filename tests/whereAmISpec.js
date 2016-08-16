@@ -15,4 +15,8 @@ describe('WhereAmI', () => {
     it('should contain text on finding help around you', () => {
       expect(wrapper.text()).to.contain("Allow your browser to track your location and we can help you find help around you");
     });
+
+    it('should exist', () => {
+      assert.isOk(component);
+    });
 });

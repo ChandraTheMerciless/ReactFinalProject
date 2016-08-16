@@ -15,4 +15,8 @@ describe('HowToHelp', () => {
     it('should contain some info on how to help', () => {
       expect(wrapper.text()).to.contain('How to Help');
     });
+
+    it('should exist', () => {
+      assert.isOk(component);
+    });
 });

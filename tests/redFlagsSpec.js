@@ -15,4 +15,8 @@ describe('RedFlags', () => {
     it('should contain text on red flags', () => {
       expect(wrapper.text()).to.contain("Employer is holding identity documents");
     });
+
+    it('should exist', () => {
+      assert.isOk(component);
+    });
 });
